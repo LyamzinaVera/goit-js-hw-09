@@ -1,0 +1,19 @@
+button {
+    position: relative;
+    left: 40%;
+    
+    width: 100px;
+    height: 40px;
+    text-decoration: none;
+    border: 2px solid rgb(146, 148, 248);
+    position: relative;
+    overflow: hidden;
+    font-size: 1rem;
+    color: black;
+    text-transform: uppercase;
+    border-radius: 5;
+}
+
+button:hover {
+    box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+}
