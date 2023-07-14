@@ -1,5 +1,5 @@
 import flatpickr from "flatpickr";
-import notiflix from "notiflix"
+import Notiflix from "notiflix"
 import "flatpickr/dist/flatpickr.min.css";
 
 const refs = {
@@ -29,7 +29,7 @@ const options = {
     },
 
     onClose(selectedDates) {
-        getTimeData = (selectedDates[0]).getTime();
+        getTimeData = selectedDates[0].getTime();
 
         if (getTimeData < new Date()) {
             Notiflix.Notify.failure('Please choose a date in the future');
@@ -85,7 +85,7 @@ function convertMs(ms) {
     // Remaining minutes
     const minutes = addLeadingZero(Math.floor(((ms % day) % hour) / minute));
     // Remaining seconds
-    const seconds = addLeadingZero(Math.floor((((ms % day) % hour) % minute)) / second);
+    const seconds = addLeadingZero(Math.floor((((ms % day) % hour) % minute) / second));
 
     return { days, hours, minutes, seconds };
 }
